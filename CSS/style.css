@@ -1,0 +1,246 @@
+#game-container{
+  overflow: hidden;
+  position: relative;
+    width: 800px;
+    height: 500px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#game-title {
+  position: fixed;
+  left: 42%;
+  margin-left: 0;
+  margin-right: 0;
+  top: 10%;
+}
+
+#playfield {
+  position: absolute;
+  left: 10;
+  top: 10;
+  width: 800px;
+  height: 500px;
+  clip: rect(0px,800px,500px,0px);
+}
+
+#sky {
+  position: absolute;
+  left: 0;
+  top:0;
+  width:800px;
+  height: 400px;    
+  background-image: linear-gradient(#03045e,#3f37c9);
+  
+}
+
+#ground {
+  position: absolute;
+  left: 0;
+  top: 400px;
+  width:800px;
+  height: 100px;    
+  background-image: linear-gradient(#03045e, #3f37c9);
+  
+}
+
+#clouds {
+  position: absolute;
+  margin-top:10%;
+  width:90000px;
+  height: 300px;
+  background-image: url("../Image/clouds.png");
+  background-repeat: repeat-x;
+}
+
+#score {
+  font-size: 5.4rem;
+  color:  rgb(212, 0, 255);
+  top: 5%;
+  right: 5%;
+  position: absolute;
+  z-index: 3;
+}
+
+#highscore-title {
+  font-family: 'Prompt', sans-serif;
+}
+
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+#index-container, #end-container, #highscore-container {
+  width: 800px;
+  height: 500px;
+  background-color: #03045e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+
+#index-container > * {
+  width: 100%;
+}
+
+#player {
+  width: 64px;
+  height: 64px;
+  transform: translateX(200px);
+  position: absolute;
+  clip: rect(0px,64px,64px,0px);
+  bottom: 18%;
+}
+
+#player-sprites {
+  position: absolute;
+  animation: walking-animation  1s steps(8) infinite;
+}
+
+@keyframes walking-animation {
+  from { 
+    transform:translateX(0);
+  }
+  
+  to {
+    transform: translateX(-512px);
+  }
+}
+
+:root {
+  background-color: black;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Bungee Hairline', cursive;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+
+h1 {
+  font-size: 40px; 
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+.platform {
+  height: 100px;
+  width: 50px;
+  background-image: linear-gradient( rgb(212, 0, 255),  #03045e);
+  position: absolute;
+  bottom: 20%;
+  border-radius: 10% 10% 0 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* BUTTONS */
+  .btn {
+    font-size: 1.8rem;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    background-color: #03045e;
+    color: white;
+    box-shadow:  3px 3px 6px #01022e,
+                -3px -3px 6px #05068e;
+    border-radius: 50px;
+    margin: 5%;
+    justify-content: center;
+    width: 200px;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    box-shadow: inset 3px 3px 6px #01022e,
+                inset -3px -3px 6px #05068e;
+    border-radius: 50px;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  
+  /* FORMS */
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+
+
+
+  li {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    font-family: 'Gruppo', cursive;
+  }
+  
+  .hidden{
+    display: none !important;
+  }

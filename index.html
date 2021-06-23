@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <title>Background Animation</title>
+
+  <audio id="jumping-sound">
+    <source src="./Audio/retro-jump.wav" type="audio/mpeg">
+  </audio>
+
+  <audio id="background-sound" loop>
+    <source src="./Audio//modular-ambient-03-791.mp3" type="audio/mpeg">
+  </audio>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Gruppo&family=Josefin+Slab:wght@100&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <audio id="sound">
+    <source href="." type="audio/mpeg">
+  </audio>
+  <div id="index-container">
+    <h1 id="game-title">Nouva</h1>
+    <a id="btnPlay" class="btn">Play</a>
+    <a id="btnHighscore" class="btn">High Scores</a>
+  </div>
+  
+  <div id="highscore-container" class="hidden flex-column flex-center">
+    <h1 class="title">Highscore</h1>
+    <ol id="highscoreList">
+    </ol>
+    <a class="btn" href="/">Go Home</a>
+  </div>
+
+  <div id="game-container" class="hidden">
+    <h1 id="score">
+      0
+    </h1>
+    <div id="sky"></div>
+    <div id="clouds"></div>
+    <div id="ground"></div>
+    <div id="floor"></div>
+    <div id="player">
+      <img id="player-sprites" src="../Image/Player.png" alt="">
+    </div>
+  </div>
+
+
+  <div id="end-container" class="hidden">
+    <div id="highScores" class="flex-center flex-column">
+      <h1>Game Over</h1>
+      <h3 id="finalScore">Your score was: </h3>
+      <br>
+      Name: <input id="name" autocomplete="off">
+      <div id="btnSaveScore" class="btn">Save</div>
+      <div id="list"></div>
+      <a class="btn" href="/">Go Home</a>
+    </div>
+  </div>
+
+  <script src="./JS/playerMovement.js" async></script>
+  <script src="./JS/enemies.js" defer></script>
+  <script src="./JS/uiController.js"></script>
+</body>
+
+</html>
